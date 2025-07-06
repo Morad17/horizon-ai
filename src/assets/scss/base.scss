@@ -148,7 +148,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  align-content: cente;
   display: flex;
   position: relative;
   z-index: 1;
@@ -179,7 +178,7 @@ body {
 
 /*------Blogs Home-------*/
 
-.blogs-home-page {
+.blogs-home {
   padding: 5rem 10rem;
   display: flex;
   justify-content: space-between;
@@ -206,5 +205,105 @@ body {
   .blog-posts {
     display: flex;
     justify-content: center;
+  }
+}
+
+/*------Contact Us-------*/
+.contact-us-home {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+
+  .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 2px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    z-index: 10; // Ensure form is above background wrapper
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 15px;
+
+      &:has(.name-group) {
+        // Style for name group container
+        .name-group {
+          flex: 1;
+        }
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      background-color: white;
+      color: #333;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    .textarea {
+      min-height: 120px;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .submit-btn {
+      padding: 15px 30px;
+      background-color: black;
+      border: 1px solid black;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $gray;
+        color: white;
+      }
+    }
   }
 }

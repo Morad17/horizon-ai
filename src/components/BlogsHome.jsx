@@ -2,7 +2,7 @@ import graduate from "../assets/images/graduate.jpg";
 
 const BlogsHome = () => {
   return (
-    <div className="blogs-home-page">
+    <div className="blogs-home">
       <h2 className="page-title">Blogs</h2>
       <p>
         Keep up-to-date with our latest news and press releases on our blog
