@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const ElevenLabsWidget = ({ agentId, ...props }) => {
+const ElevenLabsWidget = ({ agentId, textOnly = false, ...props }) => {
   const widgetRef = useRef(null);
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
@@ -30,15 +30,33 @@ const ElevenLabsWidget = ({ agentId, ...props }) => {
     if (scriptLoaded && widgetRef.current && agentId) {
       // Set the agent ID attribute
       widgetRef.current.setAttribute("agent-id", agentId);
+      // Configure text/voice options
+      if (textOnly) {
+        widgetRef.current.setAttribute("text-only", "true");
+      } else {
+        // Enable both text and voice input
+        widgetRef.current.setAttribute("text-only", "false");
+        widgetRef.current.setAttribute("allow-text", "true");
+        widgetRef.current.setAttribute("voice-enabled", "true");
+      }
     }
-  }, [scriptLoaded, agentId]);
+  }, [scriptLoaded, agentId, textOnly]);
 
   // Only render the custom element if script is loaded
   if (!scriptLoaded) {
     return <div>Loading AI assistant...</div>;
   }
 
-  return <elevenlabs-convai ref={widgetRef} agent-id={agentId} {...props} />;
+  return (
+    <elevenlabs-convai 
+      ref={widgetRef} 
+      agent-id={agentId}
+      text-only={textOnly ? "true" : "false"}
+      allow-text="true"
+      voice-enabled={textOnly ? "false" : "true"}
+      {...props} 
+    />
+  );
 };
 
 export default ElevenLabsWidget;

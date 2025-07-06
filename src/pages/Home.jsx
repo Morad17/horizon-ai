@@ -9,6 +9,7 @@ const Home = () => {
       {/* ElevenLabs Conversational AI Widget */}
       <ElevenLabsWidget
         agentId={process.env.REACT_APP_AGENT_ID}
+        textOnly={false}
         style={{
           position: "fixed",
           bottom: "20px",
