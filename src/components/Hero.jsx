@@ -4,7 +4,7 @@ import background from "../assets/images/bg-hero-img.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero full-page">
       <img className="image" src={background} alt="" />
       <div className="hero-title">
         <h2 className="title">Horizon</h2>

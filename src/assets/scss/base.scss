@@ -18,6 +18,39 @@ body {
   width: 88%;
   margin-left: 12%;
 }
+.row {
+  width: 100%;
+  display: flex;
+}
+.hr-fade {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(121, 121, 121, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  width: 25%;
+}
+.page-title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+}
+.btn {
+  padding: 10px 40px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  &:hover {
+    background-color: $turquoise;
+    transition: ease-in-out;
+    border: 2px solid $turquoise;
+    color: $white;
+  }
+}
 /*------Nav-------*/
 
 .main-nav {
@@ -61,12 +94,13 @@ body {
 }
 .hero {
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .image {
     width: 100%;
+    height: 100vh;
     position: absolute;
     z-index: -1;
   }
@@ -76,5 +110,101 @@ body {
   .title {
     margin: 0;
     color: $white;
+  }
+}
+
+/*------About Us Home-------*/
+.about-us-home {
+  padding: 5rem 10rem;
+  text-align: center;
+  .summary {
+    padding: 20px 0;
+  }
+  .row {
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .service-card {
+    width: 48%;
+    .card-svg {
+      width: 48px;
+      height: 48px;
+    }
+    .card-title {
+      margin: 10px;
+    }
+    .card-text {
+      line-height: 1.6;
+    }
+  }
+}
+/*------Hiring CTA Home-------*/
+.hiring-cta-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: cente;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  .centered-section {
+    position: relative;
+    width: 50%;
+    z-index: 50;
+    color: white;
+    font-weight: bold;
+  }
+  .background-wrapper {
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .page-title {
+    margin: 15px;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+/*------Blogs Home-------*/
+
+.blogs-home-page {
+  padding: 5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  .page-title {
+    margin-bottom: 0;
+  }
+  .blog-card {
+    display: flex;
+    width: 50%;
+  }
+  .blog-card-image {
+    width: 25%;
+  }
+  .blog-card-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .hr-fade {
+    margin: 3rem;
+  }
+  .blog-posts {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -1,11 +1,21 @@
 import React from "react";
 import Hero from "../components/Hero";
 import ElevenLabsWidget from "../components/ElevenLabsWidget";
+import AboutUsHome from "../components/AboutUsHome";
+import HiringCta from "../components/HiringCta";
+import BlogsHome from "../components/BlogsHome";
+import ContactUs from "../components/ContactUs";
+import InstaHome from "../components/InstaHome";
 
 const Home = () => {
   return (
     <div className="home">
       <Hero />
+      <AboutUsHome />
+      <HiringCta />
+      <BlogsHome />
+      <ContactUs />
+      <InstaHome />
       {/* ElevenLabs Conversational AI Widget */}
       <ElevenLabsWidget
         agentId={process.env.REACT_APP_AGENT_ID}
