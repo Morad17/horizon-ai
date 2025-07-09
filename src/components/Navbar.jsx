@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router";
 import { TiArrowSortedDown } from "react-icons/ti";
+import blog from "../assets/icons/blog.svg";
+import home from "../assets/icons/home.svg";
+import contact from "../assets/icons/contact.svg";
+import opportunities from "../assets/icons/job.svg";
+import about from "../assets/icons/about.svg";
 
 const Navbar = () => {
   return (
@@ -8,38 +13,52 @@ const Navbar = () => {
       <div className="nav-logo">LOGO</div>
       <ul className="main-nav-links">
         <li className="link">
+          <img className="nav-icon" src={home} alt="" />
           <Link to="/">Home</Link>
         </li>
-        <ul>
-          <Link to="/test">About Us</Link>
-          <TiArrowSortedDown />
-          <li className="link">
-            <Link to="/">About Us</Link>
-          </li>
-          <li className="link">
-            <Link to="/">Faq</Link>
-          </li>
-          <li className="link">
-            <Link to="/">Test Link</Link>
-          </li>
-        </ul>
-        <ul>
-          <Link to="/">Opportunities</Link>
-          <TiArrowSortedDown />
-          <li className="link">
-            <Link to="/">Clients</Link>
-          </li>
-          <li className="link">
-            <Link to="/">Opportunities</Link>
-          </li>
-          <li className="link">
-            <Link to="/">Careers</Link>
-          </li>
-        </ul>
+
+        <li className="dropdown">
+          <div className="dropdown-main">
+            <img className="nav-icon" src={about} alt="" />
+            <Link to="/about-us">About Us</Link>
+            <TiArrowSortedDown className="dropdown-arrow" />
+          </div>
+          <ul className="dropdown-menu">
+            <li className="dropdown-link">
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li className="dropdown-link">
+              <Link to="/faq">FAQ's</Link>
+            </li>
+          </ul>
+        </li>
+
+        <li className="dropdown">
+          <div className="dropdown-main">
+            <img className="nav-icon" src={opportunities} alt="" />
+            <Link to="/opportunities">Opportunities</Link>
+            <TiArrowSortedDown className="dropdown-arrow" />
+          </div>
+          <ul className="dropdown-menu">
+            <li className="dropdown-link">
+              <Link to="/">Clients</Link>
+            </li>
+            <li className="dropdown-link">
+              <Link to="/opportunities">Opportunities</Link>
+            </li>
+            <li className="dropdown-link">
+              <Link to="/">Careers</Link>
+            </li>
+          </ul>
+        </li>
+
         <li className="link">
+          <img className="nav-icon" src={blog} alt="" />
           <Link to="/">Blog</Link>
         </li>
+
         <li className="link">
+          <img className="nav-icon" src={contact} alt="" />
           <Link to="/">Contact Us</Link>
         </li>
       </ul>

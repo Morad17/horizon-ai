@@ -36,7 +36,7 @@ body {
 .page-title {
   font-size: 40px;
   line-height: 48px;
-  font-weight: 300;
+  font-weight: bold;
 }
 .btn {
   padding: 10px 40px;
@@ -62,32 +62,38 @@ body {
   height: 100%;
   width: 12%;
   position: fixed;
-}
-.nav-logo {
-  color: white;
-  margin: 10px;
-}
-.main-nav-links {
-  list-style: none;
-  padding: 0;
-  ul {
+
+  .nav-logo {
+    color: white;
+    margin: 10px;
+  }
+  .main-nav-links {
     list-style: none;
-    svg {
-      fill: white;
+    padding: 0;
+    ul {
+      list-style: none;
+      svg {
+        fill: white;
+      }
+    }
+    .link,
+    ul a {
+      color: white;
+      margin: 10px 15px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .link a {
+      text-decoration: none;
+      color: $white;
     }
   }
-  .link,
-  ul a {
+  .nav-icon {
+    width: 32px;
     color: white;
-    margin: 10px 15px;
-    font-size: 18px;
-    text-decoration: none;
-  }
-  .link a {
-    text-decoration: none;
-    color: $white;
   }
 }
+
 /*------Home Layout-------*/
 .home {
   position: relative;

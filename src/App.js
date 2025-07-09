@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Opportunities from "./pages/Opportunities";
+import Faqs from "./pages/Faqs";
 
 function App() {
   const Layout = () => {
@@ -33,6 +34,10 @@ function App() {
         {
           path: "/about-us",
           element: <AboutUs />,
+        },
+        {
+          path: "/faq",
+          element: <Faqs />,
         },
         {
           path: "/blog",
