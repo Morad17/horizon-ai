@@ -3,6 +3,11 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import Blog from "./pages/Blog";
+import Opportunities from "./pages/Opportunities";
+
 function App() {
   const Layout = () => {
     return (
@@ -24,6 +29,22 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/about-us",
+          element: <AboutUs />,
+        },
+        {
+          path: "/blog",
+          element: <Blog />,
+        },
+        {
+          path: "/contact-us",
+          element: <ContactUs />,
+        },
+        {
+          path: "/opportunities",
+          element: <Opportunities />,
         },
       ],
     },

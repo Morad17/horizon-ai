@@ -4,8 +4,8 @@ import ElevenLabsWidget from "../components/ElevenLabsWidget";
 import AboutUsHome from "../components/AboutUsHome";
 import HiringCta from "../components/HiringCta";
 import BlogsHome from "../components/BlogsHome";
-import ContactUs from "../components/ContactUs";
 import InstaHome from "../components/InstaHome";
+import ContactUsHome from "../components/ContactUsHome";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <AboutUsHome />
       <HiringCta />
       <BlogsHome />
-      <ContactUs />
+      <ContactUsHome />
       <InstaHome />
       {/* ElevenLabs Conversational AI Widget */}
       <ElevenLabsWidget
