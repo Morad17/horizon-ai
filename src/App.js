@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Opportunities from "./pages/Opportunities";
 import Faqs from "./pages/Faqs";
+import Careers from "./pages/Careers";
 
 function App() {
   const Layout = () => {
@@ -46,6 +47,10 @@ function App() {
         {
           path: "/contact-us",
           element: <ContactUs />,
+        },
+        {
+          path: "/careers",
+          element: <Careers />,
         },
         {
           path: "/opportunities",
