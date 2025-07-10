@@ -16,11 +16,13 @@ const Navbar = () => {
           <img className="nav-icon" src={home} alt="" />
           <Link to="/">Home</Link>
         </li>
-
-        <li className="dropdown">
+        <li className="dropdown d-about">
           <div className="dropdown-main">
-            <img className="nav-icon" src={about} alt="" />
-            <Link to="/about-us">About Us</Link>
+            <div className="dropdown-title">
+              <img className="nav-icon" src={about} alt="" />
+              <Link to="/about-us">About Us</Link>
+            </div>
+
             <TiArrowSortedDown className="dropdown-arrow" />
           </div>
           <ul className="dropdown-menu">
@@ -32,11 +34,13 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-
-        <li className="dropdown">
+        <li className="dropdown d-opportunities">
           <div className="dropdown-main">
-            <img className="nav-icon" src={opportunities} alt="" />
-            <Link to="/opportunities">Opportunities</Link>
+            <div className="dropdown-title">
+              <img className="nav-icon" src={opportunities} alt="" />
+              <Link to="/opportunities">Opportunities</Link>
+            </div>
+
             <TiArrowSortedDown className="dropdown-arrow" />
           </div>
           <ul className="dropdown-menu">
@@ -51,12 +55,10 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
-
         <li className="link">
           <img className="nav-icon" src={blog} alt="" />
           <Link to="/">Blog</Link>
         </li>
-
         <li className="link">
           <img className="nav-icon" src={contact} alt="" />
           <Link to="/">Contact Us</Link>

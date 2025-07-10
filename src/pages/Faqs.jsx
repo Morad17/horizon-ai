@@ -62,7 +62,7 @@ const Faqs = () => {
   ];
 
   return (
-    <div className="faqs">
+    <div className="faqs page">
       <div
         className="background-wrapper"
         style={{ backgroundImage: `${faq}` }}

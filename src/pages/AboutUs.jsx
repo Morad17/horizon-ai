@@ -1,12 +1,9 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import leads from "../assets/images/leads.jpg";
-import sales from "../assets/images/sales.jpg";
-import about1 from "../assets/gif/about1.lottie";
 
 const AboutUs = () => {
   return (
-    <div className="about-us-page">
+    <div className="about-us page">
       <div className="background-wrapper"></div>
       <h1 className="page-title">ABOUT US</h1>
       <div className="about-cards">
