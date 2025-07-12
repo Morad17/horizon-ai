@@ -56,7 +56,11 @@ body {
     color: $white;
   }
 }
-
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 /*------Home Layout-------*/
 .home {
   position: relative;
@@ -287,3 +291,7 @@ body {
 @import "./navbar.scss";
 @import "./contactUs.scss";
 @import "./opportunities.scss";
+@import "./clients.scss";
+@import "./moneyGenerated.scss";
+@import "./blog.scss";
+@import "./blog-articles.scss";

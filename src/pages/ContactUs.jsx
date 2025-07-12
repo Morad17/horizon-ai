@@ -27,6 +27,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us">
       <div className="background-wrapper"></div>
+      <h2 className="page-title">Contact Us</h2>
       <div className="contact-content">
         <div className="contact-form">
           <div className="contact-wrapper">

@@ -4,3 +4,8 @@
 
 React Router
 Scss
+
+# Things to do
+
+- Nav
+- Clients page businesses worked with (add logos)

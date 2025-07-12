@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
           <ul className="dropdown-menu">
             <li className="dropdown-link">
-              <Link to="/" onClick={handleLinkClick}>
+              <Link to="/clients" onClick={handleLinkClick}>
                 Clients
               </Link>
             </li>
@@ -72,6 +72,11 @@ const Navbar = () => {
             <li className="dropdown-link">
               <Link to="/careers" onClick={handleLinkClick}>
                 Careers
+              </Link>
+            </li>
+            <li className="dropdown-link">
+              <Link to="/money-generated" onClick={handleLinkClick}>
+                Money Generated
               </Link>
             </li>
           </ul>
