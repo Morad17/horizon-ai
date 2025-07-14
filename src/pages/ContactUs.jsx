@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import contact from "../assets/images/contact.jpg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ const ContactUs = () => {
             </p>
 
             <form onSubmit={handleSubmit}>
+              <h3></h3>
               <div className="form-group">
                 <input
                   className="name-group"
@@ -99,7 +101,12 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="contact-image">
-          <img src={contact} alt="" />
+          <DotLottieReact
+            src="https://lottie.host/5e882f18-f7ff-4394-a201-e4c72f129264/1zxotTqVSh.lottie"
+            loop
+            autoplay
+            className="card-image"
+          />
         </div>
       </div>
     </div>

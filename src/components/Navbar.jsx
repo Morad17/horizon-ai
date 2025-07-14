@@ -7,10 +7,14 @@ import contact from "../assets/icons/contact.svg";
 import opportunities from "../assets/icons/job.svg";
 import about from "../assets/icons/about.svg";
 
+import logo from "../assets/images/logo.JPG";
+
 const Navbar = () => {
   return (
     <nav className="main-nav">
-      <div className="nav-logo">LOGO</div>
+      <div className="nav-logo">
+        <img src={logo} alt="" />
+      </div>
       <ul className="main-nav-links">
         <li className="link">
           <img className="nav-icon" src={home} alt="" />
@@ -49,9 +53,6 @@ const Navbar = () => {
             </li>
             <li className="dropdown-link">
               <Link to="/opportunities">Opportunities</Link>
-            </li>
-            <li className="dropdown-link">
-              <Link to="/careers">Careers</Link>
             </li>
             <li className="dropdown-link">
               <Link to="/money-generated">Money Generated</Link>

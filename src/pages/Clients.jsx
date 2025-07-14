@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import clients from "../assets/images/clients.jpg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Clients = () => {
   const [formData, setFormData] = useState({
@@ -110,7 +111,11 @@ const Clients = () => {
           </form>
         </div>
         <div className="clients-image">
-          <img src={clients} alt="" />
+          <DotLottieReact
+            src="https://lottie.host/6bf128ea-6c5a-41c7-92c3-1f3ca0d1063f/9kwJ2ImF9c.lottie"
+            loop
+            autoplay
+          />
         </div>
       </div>
 

@@ -35,7 +35,6 @@ const Opportunities = () => {
             </button>
           </div>
           <div className="card-desc">
-            <p className="card-text">1 Position Available</p>
             <p className="card-text">Minimum requirements</p>
             <p className="card-text">
               No experience required - full training provided
@@ -55,7 +54,6 @@ const Opportunities = () => {
             </button>
           </div>
           <div className="card-desc">
-            <p className="card-text">Postion Filled</p>
             <p className="card-text">Minimum requirements</p>
             <p className="card-text">Experience not essential but benefical</p>
             <p className="card-text">Full time</p>
@@ -73,7 +71,6 @@ const Opportunities = () => {
             </button>
           </div>
           <div className="card-desc">
-            <p className="card-text">1 Positon Available</p>
             <p className="card-text">Minimum requirements</p>
             <p className="card-text">Must be educated to degree standard</p>
             <p className="card-text">Maximum 4 week notice</p>
@@ -145,12 +142,6 @@ const Opportunities = () => {
             </p>
           </SwiperSlide>
         </Swiper>
-        {/* <div className="slide">
-          <h3 className="slide-title"></h3>
-          <div className="slide-image"></div>
-          <p className="slide-text"></p>
-          <p className="slide-author"></p>
-        </div> */}
       </div>
     </div>
   );

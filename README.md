@@ -9,3 +9,7 @@ Scss
 
 - Nav
 - Clients page businesses worked with (add logos)
+  enrgy,solar,ai
+
+company trips
+team leader of the month

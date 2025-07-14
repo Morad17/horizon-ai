@@ -10,15 +10,16 @@ const AboutUsHome = () => {
       <section className="summary">
         <h2 className="page-title">Welcome to Horizon</h2>
         <p>
-          We are a Glasgow based sales and marketing specialist. Our unique and
-          personalised approach focuses on increasing brand exposure and market
-          share for our clients; providing both quality and loyal customer base
-          for some of the most recognised and up-coming brands across the UK. We
-          have the motivation, determination and ambition to become the best of
-          the best and will stop at nothing until we achieve our goal. Business
-          is extremely competitive, but with our innovative methods, great team
-          ethos, culture and environment we aim to become number one in our
-          field across our hometown of Glasgow, the UK and then Worldwide.
+          We are an Edinburgh based sales and marketing specialist. Our unique
+          and personalised approach focuses on increasing brand exposure and
+          market share for our clients; providing both quality and loyal
+          customer base for some of the most recognised and up-coming brands
+          across the UK. We have the motivation, determination and ambition to
+          become the best of the best and will stop at nothing until we achieve
+          our goal. Business is extremely competitive, but with our innovative
+          methods, great team ethos, culture and environment we aim to become
+          number one in our field across our hometown of Edinburgh, the UK and
+          then Worldwide.
         </p>
       </section>
       <hr className="hr-fade" />

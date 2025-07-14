@@ -100,11 +100,8 @@
     }
   }
   .contact-image {
-    height: 100%;
-    img {
-      max-width: 400px;
-      clip-path: ellipse(50% 50% at 50% 50%);
-      height: 100%;
+    canvas {
+      min-height: 300px;
     }
   }
   .contact-content {
