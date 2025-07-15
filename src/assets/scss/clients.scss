@@ -1,9 +1,8 @@
 .clients {
   .row {
-    max-height: 65vh;
     z-index: 11;
-    justify-content: space-evenly;
-    margin-top: 3rem;
+    justify-content: space-between;
+    padding: 3rem;
   }
   position: relative;
   margin-left: -13rem;
@@ -35,11 +34,11 @@
     position: relative;
   }
   .clients-form {
+    width: 45%;
     background-color: white;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 2px;
     max-width: 600px;
-    width: 90%;
     position: relative;
     z-index: 10; // Ensure form is above background wrapper
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -119,11 +118,16 @@
     }
   }
   .clients-image {
+    width: 45%;
     z-index: 11;
-    img {
-      height: 100%;
-      max-width: 400px;
+    canvas {
       border-radius: 5px;
+      width: 75% !important;
+      height: 75% !important;
+    }
+    div {
+      display: flex;
+      align-items: center;
     }
   }
 }

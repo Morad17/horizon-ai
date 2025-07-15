@@ -118,8 +118,6 @@ const Clients = () => {
           />
         </div>
       </div>
-
-      <div className="row"></div>
     </div>
   );
 };
