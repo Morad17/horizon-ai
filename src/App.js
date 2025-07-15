@@ -8,8 +8,8 @@ import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Opportunities from "./pages/Opportunities";
 import Faqs from "./pages/Faqs";
-import MoneyGenerated from "./pages/MoneyGenerated";
-import Clients from "./pages/Clients";
+import MoneyGenerated from "./components/MoneyGenerated";
+import Clients from "./components/Clients";
 import Entrepreneur from "./pages/blogs/Entrepreneur";
 import Launch from "./pages/blogs/Launch";
 import ElevenLabsWidget from "./components/ElevenLabsWidget";
@@ -69,14 +69,6 @@ function App() {
         {
           path: "/opportunities",
           element: <Opportunities />,
-        },
-        {
-          path: "/money-generated",
-          element: <MoneyGenerated />,
-        },
-        {
-          path: "/clients",
-          element: <Clients />,
         },
         {
           path: "/blog-entrepeneurship",

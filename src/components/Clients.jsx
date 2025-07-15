@@ -30,7 +30,7 @@ const Clients = () => {
   return (
     <div className="clients">
       <div className="background-wrapper"></div>
-      <h1 className="page-title">Clients</h1>
+      <h1 className="page-title">Ready to connect?</h1>
       <div className="row">
         <div className="clients-form">
           <form onSubmit={handleSubmit}>

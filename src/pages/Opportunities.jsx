@@ -11,6 +11,10 @@ import customer from "../assets/images/customer-service.jpg";
 import recruitment from "../assets/images/recruitment.jpg";
 import placeholder from "../assets/images/placeholder.png";
 import { Link } from "react-router";
+import Clients from "../components/Clients";
+
+import test1 from "../assets/images/testimonial-1.webp";
+import test2 from "../assets/images/testimonial-2.jpeg";
 
 const Opportunities = () => {
   return (
@@ -79,6 +83,7 @@ const Opportunities = () => {
         </div>
       </div>
       <div className="testimonials">
+        <hr className="hr-fade hr-up" />
         <h2 className="page-heading">Testimonials</h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -97,10 +102,7 @@ const Opportunities = () => {
         >
           <SwiperSlide>
             <div className="slide-image">
-              <img
-                src="https://phoenix-scotland.com/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-13-at-09.30.45-150x150.jpeg"
-                alt=""
-              />
+              <img src={test1} alt="" />
             </div>
             <p className="slide-text">
               I started working with Horizon as I wanted a career change. The
@@ -127,10 +129,7 @@ const Opportunities = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-image">
-              <img
-                src="https://phoenix-scotland.com/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-07-at-13.55.28-e1699639975131-150x150.jpeg"
-                alt=""
-              />
+              <img src={test2} alt="" />
             </div>
             <p className="slide-text">
               Working at Horizon has really helped build my confidence and
@@ -142,7 +141,9 @@ const Opportunities = () => {
             </p>
           </SwiperSlide>
         </Swiper>
+        <hr className="hr-fade hr-down" />
       </div>
+      <Clients />
     </div>
   );
 };

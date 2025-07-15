@@ -26,8 +26,8 @@
   }
   .main-nav-links {
     display: flex;
-    flex-direction: column; // Change to vertical layout
-    align-items: flex-start; // Align items to the left
+    flex-direction: column;
+    align-items: flex-start;
     list-style: none;
     margin: 0;
     padding: 0 20px 0 10px;
@@ -42,7 +42,6 @@
       width: 100%;
       color: white;
       cursor: pointer;
-      // Remove all transitions for instant response
 
       &:hover {
         background-color: $turquoise;
@@ -52,101 +51,11 @@
         text-decoration: none;
         color: inherit;
         outline: none;
-        caret-color: transparent;
-        // Add pointer-events for better click handling
-        pointer-events: auto;
       }
     }
     .divider {
       width: 100%;
       border: 0.2px solid white;
-    }
-    .dropdown {
-      position: relative;
-      padding: 10px;
-      margin: 0;
-      width: 100%;
-      color: white;
-      outline: none;
-      caret-color: transparent;
-      cursor: pointer;
-      // Remove all transitions for instant response
-
-      .dropdown-main {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        width: 100%;
-        justify-content: space-between;
-
-        a {
-          text-decoration: none;
-          color: inherit;
-          pointer-events: auto;
-        }
-
-        .dropdown-arrow {
-          // Remove transition for instant rotation
-          font-size: 14px;
-        }
-      }
-
-      // Position dropdown menu to the right
-      .dropdown-menu {
-        position: absolute;
-        top: 0; // Align with the dropdown main item
-        left: 100%; // Position to the right of the main nav
-        margin-left: 1rem; // Add some spacing
-        background: $turquoise;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
-        min-width: 180px;
-        list-style: none;
-        padding: 0.75rem 0;
-        margin-top: 0;
-
-        // Keep dropdown animation but make it faster
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-10px); // Slide from left instead of top
-        transition: all 0.15s ease; // Faster transition
-        z-index: 1000;
-
-        .dropdown-link {
-          padding: 0;
-
-          a {
-            text-decoration: none;
-            color: white;
-            display: block;
-            padding: 0.75rem 1.25rem;
-            // Remove transition for instant hover
-            font-size: 14px;
-            outline: none;
-            caret-color: transparent;
-            pointer-events: auto;
-
-            &:hover {
-              background-color: rgba(255, 255, 255, 0.1);
-            }
-          }
-        }
-      }
-
-      // Show dropdown on hover
-      &:hover {
-        background-color: $turquoise;
-
-        .dropdown-menu {
-          opacity: 1;
-          visibility: visible;
-          transform: translateX(0); // Slide in from left
-        }
-
-        .dropdown-arrow {
-          transform: rotate(90deg); // Instant rotation
-        }
-      }
     }
   }
 }
