@@ -1,6 +1,15 @@
+import { useLocation, useNavigate } from "react-router";
 import hiring from "../assets/images/hiring.jpg";
 
 const HiringCta = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (path) => {
+    if (location.pathname !== path) {
+      navigate(path);
+    }
+  };
   return (
     <div
       className="hiring-cta-page"
@@ -13,7 +22,12 @@ const HiringCta = () => {
       <section className="centered-section">
         <h2 className="page-title">Looking to kickstart your career?</h2>
         <h2 className="page-title">We are hiring!</h2>
-        <button className="btn">Get In Touch Today</button>
+        <button
+          className={`btn link ${location.pathname === "/" ? "active" : ""}`}
+          onClick={() => handleNavigation("/contact-us")}
+        >
+          Get In Touch Today
+        </button>
       </section>
     </div>
   );

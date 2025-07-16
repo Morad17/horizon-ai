@@ -2,7 +2,7 @@
 
 .main-nav {
   display: flex;
-  background-color: black;
+  background-color: $charcoal;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
@@ -56,6 +56,61 @@
     .divider {
       width: 100%;
       border: 0.2px solid white;
+    }
+  }
+}
+.mobile-nav-container {
+  position: relative;
+  width: 100vw;
+  hr {
+    width: 100%;
+    border-top: none;
+  }
+  .burger {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.2rem;
+    z-index: 2001;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $gold;
+  }
+  .mobile-nav-dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $charcoal;
+    color: white;
+    z-index: 2000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    ul {
+      display: flex;
+      flex-direction: column; // vertical
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 5rem 2rem 2rem 0;
+      margin: 0;
+      list-style: none;
+      width: 100%;
+    }
+    .link {
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #ffffff;
+      cursor: pointer;
+      width: 100%;
+      img.nav-icon {
+        margin-right: 0.8rem;
+        width: 32px;
+      }
+      &.active {
+        font-weight: bold;
+      }
     }
   }
 }

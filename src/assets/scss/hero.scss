@@ -1,0 +1,190 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    // Background image
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/bg-hero-2.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    // Black radial gradient overlay for fade
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.7) 30%,
+        rgba(0, 0, 0, 0.9) 80%
+      );
+      z-index: 2;
+    }
+  }
+  .summary {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .summary-text {
+    font-size: 45px;
+    color: white;
+    padding: 0 20rem;
+    height: 40vh;
+    margin: 0;
+  }
+  .mask {
+    font-size: 45px;
+    position: absolute;
+    padding: 0 20rem;
+    mask-image: url("../icons/mouce-circle.svg");
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    z-index: 1111;
+    color: black;
+    background: $gold;
+    height: 100%;
+    padding: 0 20rem;
+  }
+  .summary-text-mask {
+    margin: 60vh 0 0 0;
+  }
+  .top-section {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    margin: 0;
+    height: 60vh;
+    z-index: 1111;
+  }
+  .cta-div {
+    padding-bottom: 10rem;
+  }
+  .image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .hero-title {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+  .btn {
+    cursor: pointer !important;
+  }
+  .title {
+    margin: 0 10px;
+    color: $white;
+  }
+
+  .main-title {
+    margin: 0 10px;
+    background: linear-gradient(
+      135deg,
+      rgb(229 218 134) 0%,
+      rgb(147 103 44) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; // fallback for browsers that don't support background-clip
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    .summary,
+    .summary-text,
+    .mask {
+      padding: 0 4rem;
+    }
+    .hero-title {
+      font-size: 2.2rem;
+      padding-bottom: 2rem;
+    }
+    .summary-text,
+    .mask {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 100vh;
+    text-align: center;
+    .summary,
+    .summary-text {
+      padding: 0 3rem;
+    }
+    .summary-text,
+    .mask {
+      font-size: 1.5rem;
+      height: auto;
+    }
+    .hero-title {
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 0;
+    }
+    .main-title,
+    .title {
+      margin: 0 4px;
+    }
+    .top-section {
+      height: auto;
+      padding-top: 4rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    .summary,
+    .summary-text {
+      padding: 0 3rem;
+      line-height: 1.5;
+    }
+    .hero-title {
+    }
+    .main-title,
+    .title {
+      margin: 0 2px;
+    }
+  }
+}

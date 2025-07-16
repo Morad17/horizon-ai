@@ -37,33 +37,13 @@ const InstaHome = () => {
       <h2 className="page-title">Latest from Instagram</h2>
 
       <div className="instagram-grid">
-        {instagramPosts.map((postUrl, index) => (
-          <div key={index} className="instagram-post-embed">
-            <blockquote
-              className="instagram-media"
-              data-instgrm-permalink={postUrl}
-              data-instgrm-version="14"
-              data-instgrm-captioned
-            >
-              <div style={{ padding: "16px" }}>
-                <a href={postUrl} target="_blank" rel="noopener noreferrer">
-                  View this post on Instagram
-                </a>
-              </div>
-            </blockquote>
-          </div>
-        ))}
-      </div>
-
-      <div className="instagram-cta">
-        <a
-          href="https://www.instagram.com/_phoenix_ltd/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn instagram-btn"
-        >
-          Follow Us @_phoenix_ltd
-        </a>
+        <iframe
+          src="//lightwidget.com/widgets/65eec74bcf165701a0fde22a5114bbd6.html"
+          scrolling="no"
+          allowtransparency="true"
+          class="lightwidget-widget"
+          style={{ width: "100%", border: 0, overflow: "hidden" }}
+        ></iframe>
       </div>
     </div>
   );

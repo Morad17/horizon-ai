@@ -8,7 +8,7 @@ import opportunities from "../assets/icons/job.svg";
 import about from "../assets/icons/about.svg";
 import faq from "../assets/icons/faq.svg";
 
-import logo from "../assets/images/logo.JPG";
+import logo from "../assets/images/horizon-logo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();

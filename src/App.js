@@ -13,27 +13,22 @@ import Clients from "./components/Clients";
 import Entrepreneur from "./pages/blogs/Entrepreneur";
 import Launch from "./pages/blogs/Launch";
 import ElevenLabsWidget from "./components/ElevenLabsWidget";
+import CustomCursor from "./components/CustomCursor";
+import useIsMobileOrTablet from "./hooks/useIsMobileOrTablet";
+import NavMobile from "./components/NavMobile"; // create this component
 
 function App() {
   const Layout = () => {
+    const isMobileOrTablet = useIsMobileOrTablet();
+
     return (
       <div className="main-layout">
-        <Navbar />
+        {isMobileOrTablet ? <NavMobile /> : <Navbar />}
         <div className="content">
           <Outlet />
-          {/* ElevenLabs Conversational AI Widget */}
-          {/* <ElevenLabsWidget
-            agentId={process.env.REACT_APP_AGENT_ID}
-            textOnly={false}
-            style={{
-              position: "fixed",
-              bottom: "20px",
-              right: "20px",
-              zIndex: 1000,
-            }}
-          /> */}
           <elevenlabs-convai
             agent-id={process.env.REACT_APP_AGENT_ID}
+            style={{ zIndex: "1111" }}
           ></elevenlabs-convai>
           <Footer />
         </div>
