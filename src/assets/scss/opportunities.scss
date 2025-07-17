@@ -168,3 +168,76 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .opportunities {
+    padding: 2rem 0 0 0;
+    .op-card {
+      width: 60%;
+    }
+    .op-carousel {
+      position: relative;
+      overflow: hidden; // Hide overflow from slides
+      width: 75%;
+      background-color: white;
+      border-radius: 5px;
+      padding: 2rem 0rem;
+
+      .swiper-slide {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .opportunities {
+    .title-row {
+      margin: 0;
+      text-align: center;
+    }
+    .page-title {
+      margin: 0;
+    }
+    .op-cards {
+      flex-wrap: wrap;
+      margin-top: 1.5rem; // reduce top margin
+    }
+    .op-card {
+      width: 75%;
+      margin: 10px auto;
+      height: auto;
+      min-height: 220px;
+      .card-cta {
+        margin: 1rem;
+      }
+      .card-title {
+        font-size: 1.5rem;
+      }
+    }
+    .testimonials {
+      margin-top: 1.5rem !important;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 2rem 0.5rem;
+      position: static; // remove relative/absolute if not needed
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .opportunities {
+    .op-cards {
+      margin-top: 1rem;
+    }
+    .testimonials {
+      margin-top: 10rem !important;
+      padding: 1rem 0.2rem;
+    }
+  }
+}

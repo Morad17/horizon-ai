@@ -450,6 +450,8 @@ body {
     min-height: 100vh;
     width: 100vw;
     justify-content: start;
+    text-align: center;
+    overflow-x: hidden;
     .blog-posts {
       flex-direction: column;
     }
@@ -464,5 +466,14 @@ body {
   .contact-us-home .contact-form input,
   .contact-us-home .contact-form textarea {
     font-size: 12px;
+  }
+  //Hirting CTA
+  .hiring-cta-page {
+    .centered-section {
+      width: 90%;
+    }
+    .page-title {
+      font-size: 30px;
+    }
   }
 }

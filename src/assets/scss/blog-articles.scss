@@ -50,3 +50,20 @@
     text-align: left;
   }
 }
+
+@media (max-width: 1200px) {
+  .article {
+    padding: 2rem 0 0 0;
+    .page-title {
+      text-align: center;
+      padding: 0 2rem;
+      color: black;
+    }
+    .article-image {
+      float: none;
+      padding: 0;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+  }
+}

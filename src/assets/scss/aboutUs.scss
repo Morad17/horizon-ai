@@ -92,20 +92,6 @@
   }
 }
 
-// Responsive flexbox
-@media (max-width: 1024px) {
-  .about-us .about-cards .about-card {
-    flex: 0 1 calc(50% - 1rem); // 2 cards per row on tablets
-  }
-}
-
-@media (max-width: 768px) {
-  .about-us .about-cards .about-card {
-    flex: 0 1 100%; // 1 card per row on mobile
-    max-width: none;
-  }
-}
-
 /*---------FAQ's------*/
 
 .faqs {
@@ -212,5 +198,35 @@
     background: linear-gradient(135deg, silver 0%, rgb(59, 59, 59) 100%);
     clip-path: polygon(85% 0, 0 30%, 0 0);
     z-index: 1;
+  }
+}
+
+// Media Query
+@media (max-width: 1024px) {
+  .about-us {
+    .about-cards .about-card {
+      flex: 0 1 calc(50% - 1rem); // 2 cards per row on tablets
+    }
+    .page-title {
+      text-align: center;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .faqs {
+    padding: 1rem;
+    .page-title {
+      text-align: center;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us .about-cards .about-card {
+    flex: 0 1 100%; // 1 card per row on mobile
+    max-width: none;
   }
 }
