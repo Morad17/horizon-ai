@@ -52,7 +52,7 @@ const Hero = () => {
       </motion.div>
       <p className="summary-text">
         We help established and emerging brands grow across the UK through
-        smart, personalised campaigns. Based in Edinburgh, we craft strategies
+        smart, personalised campaigns. Based in Glasgow, we craft strategies
         that build loyal customers and drive real results.
       </p>
     </div>
