@@ -33,7 +33,7 @@ const Opportunities = () => {
           style={{ backgroundImage: `url(${customer})` }}
         >
           <div className="card-cta">
-            <h3 className="card-title">Customer Service</h3>
+            <h3 className="card-title">Sales Assistant</h3>
             <button className="btn">
               <Link to="/contact-us">Click here</Link>
             </button>
@@ -114,19 +114,6 @@ const Opportunities = () => {
               <strong>Management Trainee Programme</strong>
             </p>
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <div className="slide-image">
-              <img src={placeholder} alt="" />
-            </div>
-            <p className="slide-text">
-              Working with Horizon has been amazing the clear progression route
-              combined with the training has been great!
-            </p>
-            <p className="slide-author">
-              <strong>Joe</strong>
-              <strong>Management Trainee Programme </strong>
-            </p>
-          </SwiperSlide>
           <SwiperSlide>
             <div className="slide-image">
               <img src={test2} alt="" />
@@ -136,8 +123,8 @@ const Opportunities = () => {
               taught me really good communication skills for the future!
             </p>
             <p className="slide-author">
-              <strong> Victoria Management</strong>{" "}
-              <strong>Trainee Programme</strong>
+              <strong> Victoria </strong>{" "}
+              <strong>Management Trainee Programme</strong>
             </p>
           </SwiperSlide>
         </Swiper>

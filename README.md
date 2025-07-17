@@ -7,9 +7,5 @@ Scss
 
 # Things to do
 
-- Nav
-- Clients page businesses worked with (add logos)
-  enrgy,solar,ai
-
-company trips
-team leader of the month
+- new blog post: q3 conference
+- connect emails

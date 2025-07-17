@@ -15,7 +15,7 @@ const Faqs = () => {
       id: 1,
       question: "What does Horizon do?",
       answer:
-        "We are a Edinburgh based sales and marketing specialist. Our unique and personalised approach focuses on increasing brand exposure and market share for our clients; providing both quality and loyal customer base for some of the most recognised and upcoming brands across the UK. We have the motivation, determination and ambition to become the best of the best and will stop at nothing until we achieve our goal. Business is extremely competitive, but with our innovative methods, great team ethos, culture and environment we aim to become number one in our field across our hometown of Edinburgh, the UK and then Worldwide.",
+        "We are a Edinburgh based sales and marketing specialist. Our unique and personalised approach focuses on increasing brand exposure and market share for our clients; providing both quality and loyal customer base for some of the most recognised and upcoming brands across the UK. We have the motivation, determination and ambition to become the best of the best. Business is extremely competitive, but with our innovative methods, great team ethos, culture and environment we aim to become number one in our field across our hometown of Edinburgh, the UK and then Worldwide.",
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ const Faqs = () => {
       id: 8,
       question: "Horizon reviews",
       answer:
-        "Wondering what it's like to work for Horizon? Check out our testimonials page!",
+        "Wondering what it's like to work for Horizon? Check out our Testimonials on the Opportunities page!",
     },
   ];
 

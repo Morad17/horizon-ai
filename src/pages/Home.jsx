@@ -14,7 +14,6 @@ const Home = () => {
       <HiringCta />
       <BlogsHome />
       <ContactUsHome />
-      <InstaHome />
     </div>
   );
 };

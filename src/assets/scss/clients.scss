@@ -131,7 +131,15 @@
     }
   }
 }
-
+@media (max-width: 1500px) {
+  .clients {
+    padding: 0 6rem;
+    .row {
+      width: 100%;
+      gap: 10px;
+    }
+  }
+}
 @media (max-width: 1200px) {
   .clients {
     padding: 0rem;
