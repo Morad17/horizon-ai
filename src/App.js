@@ -8,12 +8,8 @@ import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import Opportunities from "./pages/Opportunities";
 import Faqs from "./pages/Faqs";
-import MoneyGenerated from "./components/MoneyGenerated";
-import Clients from "./components/Clients";
 import Entrepreneur from "./pages/blogs/Entrepreneur";
 import Launch from "./pages/blogs/Launch";
-import ElevenLabsWidget from "./components/ElevenLabsWidget";
-import CustomCursor from "./components/CustomCursor";
 import useIsMobileOrTablet from "./hooks/useIsMobileOrTablet";
 import NavMobile from "./components/NavMobile"; // create this component
 
@@ -27,7 +23,7 @@ function App() {
         <div className="content">
           <Outlet />
           <elevenlabs-convai
-            agent-id={process.env.REACT_APP_AGENT_ID}
+            agent-id={process.env.AGENT_ID}
             style={{ zIndex: "1111" }}
           ></elevenlabs-convai>
           <Footer />
