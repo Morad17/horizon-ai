@@ -413,6 +413,7 @@ body {
 @import "./moneyGenerated.scss";
 @import "./blog.scss";
 @import "./blog-articles.scss";
+@import "./careers.scss";
 
 @keyframes card-slide-up {
   from {
@@ -481,4 +482,44 @@ body {
       font-size: 30px;
     }
   }
+}
+
+/* Add to your CSS/SCSS file */
+.status-message {
+  width: 100%;
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  P {
+    padding: 5px 0;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    color: white !important;
+    background-color: $gold;
+  }
+}
+.validation-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 0;
+  P {
+    padding: 5px 0;
+    width: 100%;
+    border: 2px solid red;
+    font-weight: bold;
+    font-size: 16px;
+    color: red !important;
+    background-color: white;
+  }
+}
+.status-message.success p {
+  background-color: #2ecc40; /* green */
+}
+.status-message.error p {
+  background-color: #ff4136; /* red */
 }

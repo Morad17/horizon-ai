@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import contact from "../assets/images/contact-us-img.jpg";
+import { useNavigate } from "react-router";
 
-const AGENT_ID = process.env.REACT_APP_AGENT_ID;
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+const TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY_CONTACT;
 
 const ContactUsHome = () => {
   const {
@@ -15,18 +15,31 @@ const ContactUsHome = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate(); // <-- Add this
   const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // "success" or "error"
 
   const onSubmit = (data) => {
-    console.log(AGENT_ID, SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
     setStatus("Sending...");
+    setStatusType(""); // reset
     emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY).then(
       () => {
-        setStatus("Message sent!");
+        setStatus("Message sent");
+        setStatusType("success");
         reset();
+        setTimeout(() => {
+          setStatus("");
+          setStatusType("");
+          navigate("/"); // <-- Navigate to home after 3 seconds
+        }, 3000);
       },
       () => {
         setStatus("Failed to send. Please try again.");
+        setStatusType("error");
+        setTimeout(() => {
+          setStatus("");
+          setStatusType("");
+        }, 5000); // Hide after 5 seconds
       }
     );
   };
@@ -96,7 +109,9 @@ const ContactUsHome = () => {
           {errors.phone && <p>{errors.phone.message}</p>}
           {errors.subjectMatter && <p>{errors.subjectMatter.message}</p>}
         </div>
-        {status && <p>{status}</p>}
+        <div className={`status-message ${statusType}`}>
+          {status && <p>{status}</p>}
+        </div>
       </div>
     </div>
   );

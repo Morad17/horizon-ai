@@ -1,28 +1,46 @@
 import React, { useState } from "react";
-import contact from "../assets/images/contact.jpg";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { useNavigate } from "react-router";
+
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const CONTACT_TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY_CONTACT;
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    subjectMatter: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    console.log(`Changing ${name} to: ${value}`); // Debug log
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // "success" or "error"
+  const navigate = useNavigate();
+  const onSubmit = (data) => {
+    setStatus("Sending...");
+    setStatusType(""); // reset
+    emailjs.send(SERVICE_ID, CONTACT_TEMPLATE_ID, data, PUBLIC_KEY).then(
+      () => {
+        setStatus("Message sent");
+        setStatusType("success");
+        reset();
+        setTimeout(() => {
+          setStatus("");
+          setStatusType("");
+          navigate("/");
+        }, 3000);
+      },
+      () => {
+        setStatus("Failed to send. Please try again.");
+        setStatusType("error");
+        setTimeout(() => {
+          setStatus("");
+          setStatusType("");
+        }, 5000); // Hide after 5 seconds
+      }
+    );
   };
 
   return (
@@ -42,62 +60,69 @@ const ContactUs = () => {
               </strong>
             </p>
 
-            <form onSubmit={handleSubmit}>
-              <h3></h3>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-group">
                 <input
                   className="name-group"
                   type="text"
                   placeholder="First Name"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
+                  {...register("firstName", {
+                    required: "First name is required",
+                  })}
                 />
                 <input
                   className="name-group"
                   type="text"
                   placeholder="Last Name"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
+                  {...register("lastName", {
+                    required: "Last name is required",
+                  })}
                 />
               </div>
               <div className="form-group">
                 <input
                   type="email"
                   placeholder="Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
                 />
               </div>
               <div className="form-group">
                 <input
                   type="tel"
                   placeholder="Phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
+                  {...register("phone", { required: "Phone is required" })}
                 />
               </div>
               <div className="form-group">
                 <textarea
                   className="textarea"
-                  name="subjectMatter"
                   placeholder="Subject Matter"
-                  value={formData.subjectMatter}
-                  onChange={handleChange}
-                  required
+                  {...register("subjectMatter", {
+                    required: "Subject is required",
+                  })}
                 />
               </div>
               <button className="submit-btn" type="submit">
                 Send Message
               </button>
             </form>
+            {/* Error messages */}
+            <div className="validation-message" style={{ color: "red" }}>
+              {errors.firstName && <p>{errors.firstName.message}</p>}
+              {errors.lastName && <p>{errors.lastName.message}</p>}
+              {errors.email && <p>{errors.email.message}</p>}
+              {errors.phone && <p>{errors.phone.message}</p>}
+              {errors.subjectMatter && <p>{errors.subjectMatter.message}</p>}
+            </div>
+            <div className={`status-message ${statusType}`}>
+              {status && <p>{status}</p>}
+            </div>
           </div>
         </div>
         <div className="contact-image">

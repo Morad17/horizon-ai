@@ -7,6 +7,7 @@ import contact from "../assets/icons/contact.svg";
 import opportunities from "../assets/icons/job.svg";
 import about from "../assets/icons/about.svg";
 import faq from "../assets/icons/faq.svg";
+import careerIcon from "../assets/icons/cIcon.svg";
 
 import logo from "../assets/images/horizon-logo.png";
 
@@ -57,6 +58,13 @@ const Navbar = () => {
         >
           <img className="nav-icon" src={opportunities} alt="" />
           <span>Opportunities</span>
+        </li>
+        <li
+          className={`link ${location.pathname === "/careers" ? "active" : ""}`}
+          onClick={() => handleNavigation("/careers")}
+        >
+          <img className="nav-icon" src={careerIcon} alt="" />
+          <span>Careers</span>
         </li>
         <li
           className={`link ${location.pathname === "/blog" ? "active" : ""}`}

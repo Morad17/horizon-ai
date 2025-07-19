@@ -13,6 +13,7 @@ import Entrepreneur from "./pages/blogs/Entrepreneur";
 import Launch from "./pages/blogs/Launch";
 import useIsMobileOrTablet from "./hooks/useIsMobileOrTablet";
 import NavMobile from "./components/NavMobile";
+import Careers from "./pages/Careers";
 
 function App() {
   const [agentId, setAgentId] = useState("");
@@ -63,6 +64,10 @@ function App() {
         {
           path: "/blog",
           element: <Blog />,
+        },
+        {
+          path: "/careers",
+          element: <Careers />,
         },
         {
           path: "/contact-us",
