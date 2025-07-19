@@ -9,3 +9,8 @@ Scss
 
 - new blog post: q3 conference
 - connect emails
+
+contact:
+questioaire
+
+Hr:

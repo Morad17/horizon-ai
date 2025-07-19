@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -11,9 +12,17 @@ import Faqs from "./pages/Faqs";
 import Entrepreneur from "./pages/blogs/Entrepreneur";
 import Launch from "./pages/blogs/Launch";
 import useIsMobileOrTablet from "./hooks/useIsMobileOrTablet";
-import NavMobile from "./components/NavMobile"; // create this component
+import NavMobile from "./components/NavMobile";
 
 function App() {
+  const [agentId, setAgentId] = useState("");
+
+  useEffect(() => {
+    fetch("/.netlify/functions/elevenLabs")
+      .then((res) => res.json())
+      .then((data) => setAgentId(data.agentId));
+  }, []);
+
   const Layout = () => {
     const isMobileOrTablet = useIsMobileOrTablet();
 
@@ -22,10 +31,12 @@ function App() {
         {isMobileOrTablet ? <NavMobile /> : <Navbar />}
         <div className="content">
           <Outlet />
-          <elevenlabs-convai
-            agent-id={process.env.AGENT_ID}
-            style={{ zIndex: "1111" }}
-          ></elevenlabs-convai>
+          {agentId && (
+            <elevenlabs-convai
+              agent-id={agentId}
+              style={{ zIndex: "1111" }}
+            ></elevenlabs-convai>
+          )}
           <Footer />
         </div>
       </div>
